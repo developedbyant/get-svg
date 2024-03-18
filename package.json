@@ -1,0 +1,23 @@
+{
+    "name": "get-svg",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "Add svg to your project using fetch.",
+    "bin": "./build/main.js",
+    "main": "./build/main.js",
+    "files": [ "./build" ],
+    "keywords": [
+        "icons"
+    ],
+    "author": "DevelopedByAnt",
+    "license": "ISC",
+    "dependencies": {
+        "@clack/prompts": "^0.7.0",
+        "svg-parser": "^2.0.4"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.29",
+        "@types/svg-parser": "^2.0.6"
+    },
+    "repository": { "url": "https://github.com/developedbyant/get-svg" }
+}

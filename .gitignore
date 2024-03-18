@@ -1,0 +1,5 @@
+.vscode
+icons
+test*
+node_modules
+build
