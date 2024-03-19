@@ -1,7 +1,7 @@
 {
     "name": "get-svg",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Add svg to your project using fetch.",
     "bin": "./build/main.js",
     "main": "./build/main.js",

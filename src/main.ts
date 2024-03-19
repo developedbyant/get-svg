@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import * as clack from "@clack/prompts"
 import utils from "./utils.js"
-import type { ChildrenData,Providers,Config } from "./types"
+import type { Config } from "./types"
 
 // Show package path
 if(process.argv.find(data=>data.includes("--dev"))) clack.log.info(path.dirname(new URL(import.meta.url).pathname))
@@ -52,6 +52,7 @@ async function selectFramework(){
         message:"Choose framework",
         options: [
             { label: "Plain svg",value:"svg" },
+            { label: "svelte",value:"svelte" },
             { label: "JSX",value:"jsx" },
         ],
     })
@@ -115,7 +116,7 @@ while(true){
     }
     svgText += "</svg>"
     // save icons
-    const svgPath = CONFIG.iconsPath+utils.compName(CONFIG.svgName)+(CONFIG.framework==="jsx"?".tsx":".svg")
+    const svgPath = CONFIG.iconsPath+utils.compName(CONFIG.svgName)+(CONFIG.framework==="jsx" ? ".tsx" : CONFIG.framework==="svelte" ? ".svelte" : ".svg")
     fs.writeFileSync(svgPath,CONFIG.framework==="jsx" ? utils.toJsx(svgText) : svgText)
     clack.log.success(`Svg saved to: ${svgPath}`)
     // Ask for changes

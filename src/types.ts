@@ -2,4 +2,4 @@ export type ChildrenData = { type:string,tagName:string,properties:{[key:string]
 
 export type Providers = "google" | "lucide" | "bootstrap" | "fontawesome"
 
-export type Config = { iconsPath:string, iconProvider:Providers, framework:"jsx"|"svg",svgName:string }
+export type Config = { iconsPath:string, iconProvider:Providers, framework:"jsx"|"svg"|"svelte",svgName:string }
